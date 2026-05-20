@@ -36,8 +36,6 @@ yarn-error.log*
 package-lock.json.backup
 
 # IDE和编辑器文件（根据需要调整）
-.vscode/settings.json
-.vscode/extensions.json
 # 保留launch.json和tasks.json用于项目配置
 
 # 原有的gitignore内容保持不变
@@ -178,7 +176,6 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
 .envrc
 .dev.vars
 .venv
@@ -258,3 +255,4 @@ AGENTS.md
 
 tools/测试文件/
 tools/对比结果/
+config.bat

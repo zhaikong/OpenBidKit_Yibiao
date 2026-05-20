@@ -2,23 +2,23 @@
   "name": "yibiao-client",
   "version": "0.1.0",
   "private": true,
-  "description": "易标投标工具箱独立桌面客户端",
+  "description": "\u6613\u6807\u6295\u6807\u5de5\u5177\u7bb1\u72ec\u7acb\u684c\u9762\u5ba2\u6237\u7aef",
   "author": "mark",
   "main": "electron/main.cjs",
   "type": "module",
   "scripts": {
-    "dev": "concurrently -k -n vite,electron -c blue,magenta \"vite --host 127.0.0.1 --port 5173 --strictPort\" \"wait-on http://127.0.0.1:5173 && cross-env ELECTRON_RENDERER_URL=http://127.0.0.1:5173 electron .\"",
+    "dev": "node api.js && concurrently -k -n vite,electron -c blue,magenta \"vite --host 127.0.0.1 --port 5173 --strictPort\" \"wait-on http://127.0.0.1:5173 && cross-env ELECTRON_RENDERER_URL=http://127.0.0.1:5173 electron .\"",
     "build": "tsc --noEmit && vite build",
     "dist": "npm run build && electron-builder",
     "dist:win": "npm run build && electron-builder --win",
     "dist:mac": "npm run build && electron-builder --mac",
     "preview": "vite preview --host 127.0.0.1 --port 4173",
-    "start": "electron ."
+    "start": "node api.js && electron ."
   },
   "build": {
     "appId": "com.yibiao.openbidkit",
-    "productName": "易标投标工具箱",
-    "copyright": "Copyright © 2026 mark",
+    "productName": "\u6613\u6807\u6295\u6807\u5de5\u5177\u7bb1",
+    "copyright": "Copyright \u00a9 2026 mark",
     "asar": true,
     "directories": {
       "output": "release"
